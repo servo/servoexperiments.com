@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel=stylesheet href="leaflet.css"></link>
+<script>
+    window.L_DISABLE_3D = true;
+</script>
+<script src="leaflet-src.js"></script>
+<style>
+body, html {
+    margin: 0;
+    height: 100%;
+}
+#map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+}
+</style>
+</head>
+<body>
+<div id=map></div>
+<script>
+var map = L.map('map').setView([37.78796, -122.42497], 17);
+L.tileLayer('http://api.tiles.mapbox.com/v4/{mapId}/{z}/{x}/{y}.png?access_token={token}', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    maxZoom: 18,
+    mapId: 'pcwalton.lo6gfmh9',
+    token: 'pk.eyJ1IjoicGN3YWx0b24iLCJhIjoiUDE3aHh4ayJ9.H3-uz4Y4MlFdw5KBjPM-sg',
+}).addTo(map);
+</script>
+</body>
+</html>
+
