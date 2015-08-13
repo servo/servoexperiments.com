@@ -23,6 +23,14 @@ body {
   top: 100px;
 }
 
+#ad {
+  border: 0;
+  left: 50%;
+  margin-left: -364px;
+  position: absolute;
+  bottom: 0;
+}
+
 .particle {
   background: #fff;
   border-radius: 50%;
