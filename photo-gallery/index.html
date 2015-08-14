@@ -15,10 +15,10 @@
 <footer>
     <div class=footer-box id=count-container>
         <select id=count onchange="reload()">
-            <option value=100>100</option>
+            <option value=100 selected>100</option>
             <option value=500>500</option>
             <option value=1000>1,000</option>
-            <option value=3000 selected>3,000</option>
+            <option value=3000>3,000</option>
             <option value=5000>5,000</option>
             <option value=10000>10,000</option>
         </select> photos loaded
@@ -175,8 +175,7 @@ function makeALittleBigger() {
 document.addEventListener('keydown', onKeyDown, true);
 
 document.getElementById('zoom-slider').setAttribute('data-value', 240);
-//document.getElementById('count').value = 5000;
-document.getElementById('count').value = 3000;
+document.getElementById('count').value = 100;
 
 initPhotoStyles();
 reload();
