@@ -586,7 +586,7 @@ L.Mixin = {Events: proto};
 	    gecko3d = 'MozPerspective' in doc.style,
 	    opera12 = 'OTransition' in doc.style;
 
-	var touch = !window.L_NO_TOUCH && !phantomjs && (pointer || 'ontouchstart' in window ||
+	var touch = !window.L_NO_TOUCH && !phantomjs && (pointer || 'TouchEvent' in window ||
 			(window.DocumentTouch && document instanceof window.DocumentTouch));
 
 	L.Browser = {

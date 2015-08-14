@@ -9,6 +9,7 @@
 }*/
 </style>
 <style id=photo-styles></style>
+<meta name="viewport" content="width=device-width">
 </head>
 <body>
 <footer>
@@ -136,6 +137,21 @@ var zoomSlider = document.getElementById('zoom-slider');
 zoomKnob.addEventListener('mouseup', stopSliding, false);
 zoomSlider.addEventListener('click', startSliding, false);*/
 zoomSlider.addEventListener('mousemove', slide, false);
+
+zoomSlider.addEventListener('touchstart', function(ev) {
+  startSliding(ev.changedTouches[0]);
+  ev.preventDefault();
+}, false);
+
+zoomSlider.addEventListener('touchmove', function(ev) {
+  slide(ev.changedTouches[0]);
+}, false);
+
+zoomSlider.addEventListener('touchend', function(ev) {
+  stopSliding(ev.changedTouches[0]);
+  ev.preventDefault();
+}, false);
+
 
 /*
 var lastFrameTime = Date.now();
