@@ -2,12 +2,6 @@
 <html>
 <head>
 <link rel=stylesheet type=text/css href=photos.css></link>
-<style>
-/*.photo {
-    width: 12em;
-    height: 9em;
-}*/
-</style>
 <style id=photo-styles></style>
 <meta name="viewport" content="width=device-width">
 </head>
@@ -47,7 +41,7 @@ Rand.prototype.rand = function() {
     return this.w;
 }
 
-var MAX_PHOTO = 11;
+var MAX_PHOTO = 20;
 
 function zoom() {
     var width = +document.getElementById('zoom-slider').getAttribute('data-value');
@@ -66,7 +60,7 @@ function reload() {
         //string += "<div class=photo-divider>";
         for (var j = i; j < Math.min(photoCount, j + 1000); j++) {
             var photoId = rng.rand() % MAX_PHOTO;
-            var photo = "photo" + (photoId < 10 ? "0" : "") + photoId + ".jpg";
+            var photo = "photo" + (photoId + 1) + ".jpg";
             string += "<div class=photo data-photo=\"" + photo + "\" " +
                 "style='background-image: url(" + photo + ")'></div>";
         }
