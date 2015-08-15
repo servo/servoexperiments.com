@@ -17,7 +17,7 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 24px;
+    height: 40px;
     border-top: solid 1px #515151;
     /*background: linear-gradient(top, #ececec, #d2d2d2);
     background: -moz-linear-gradient(top, #ececec, #d2d2d2);
@@ -28,7 +28,8 @@ footer {
 }
 .footer-box {
     position: absolute;
-    width: 200px;
+    left: 0;
+    right: 0;
     top: 0;
     bottom: 0;
 }
@@ -45,7 +46,7 @@ footer {
     position: absolute;
     display: block;
     background: url(glyphicons-4-user.png) center center no-repeat;
-    top: 0;
+    top: 8px;
     width: 23px;
     height: 22px;
     opacity: 0.5;
@@ -67,8 +68,8 @@ footer {
 }
 #zoom-slider {
     position: absolute;
-    top: 6px;
-    height: 8px;
+    top: 12px;
+    height: 16px;
     left: 32px;
     right: 32px;
     border-radius: 8px;
@@ -76,11 +77,11 @@ footer {
 }
 #zoom-knob {
     position: absolute;
-    top: -4px;
+    top: -8px;
     bottom: 0;
-    width: 16px;
-    height: 16px;
-    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
     background: black;
 }
 
